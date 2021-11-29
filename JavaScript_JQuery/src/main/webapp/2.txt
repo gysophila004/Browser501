@@ -1,0 +1,10 @@
+1. .box > ul > li > p {color: orange;}
+   box라는 클래스 속성값을 가진 요소의 자손 요소중 
+   ul(순서없는 목록) 내의 li(내용)의 p(문단)요소 글자 속성을 orange(주황) 색상으로 한다.
+  
+2. header .menu li:nth-child(2) {background: red;}
+   header내 에서 class가 menu이며 목록의 내용(li)인 요소 중 두 번째의 배경색을 red(빨강)으로 지정 
+   
+3. #wrap .content .prod {border: 3px dashed gray;}
+   id가 wrap인 속성값을 갖는 요소의 자손 중 class가 content이며, 
+   또 그 자손 중 class가 prod인 요소들의 테두리를 3px, dashed(점선), 회색으로 한다. 

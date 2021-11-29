@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		function Student(name, korean, math, english, science) {
+			//속성
+			this.stname = name;
+			this.stkorean = korean;
+			this.stmath = math;
+			this.steng = english;
+			this.stsci = science;
+			
+			//메서드
+			this.getsum = function() {				
+				var sumresult = this.stkorean+this.stmath+this.steng+this.stsci;
+				return sumresult; 
+			}
+			
+			this.getavg = function() {
+				var avgresult = this.getsum() / 5;
+				return avgresult;
+			}
+			
+			
+			this.toString = function(){
+				var sum = this.getsum();
+				var avg = this.getavg();
+				var output = this.stname + "\t" + sum + "\t" + avg;
+				document.write(output);
+				return;
+				
+			}
+		
+			
+			
+		}
+		
+		var st1 = new Student("홍길동", 10, 20, 30, 40);
+		
+		st1.toString();
+		//학생정보배열을 만듭니다.
+		// var students = [];
+		
+		
+		//출력
+		
+		// var output = '이름\t총점\t\평균\n'
+	
+	</script>
+
+</body>
+</html>

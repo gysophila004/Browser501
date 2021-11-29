@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2019년 달력</title>
+<SCRIPT>
+// 시간을 읽어와서 오전/오후로 브라우저에 보여줄 수 있게 해줍니다.
+function get_Time() 
+{
+  var now = new Date();
+  var hour = now.getHours();
+  var minute = now.getMinutes();
+  var ampm;
+
+  now = null;
+
+  if (hour >= 12) {
+      hour -= 12;
+      ampm = "오후";
+   } else
+      ampm = "오전";
+
+  hour = (hour == 0) ? 12 : hour;
+
+  if (minute < 10)
+    minute = "0" + minute ;
+
+  return ampm + hour + ":" + minute ;
+}
+
+// 년과 달을 받아서 마지막 일을 알아 냅니다.
+function get_Day(year, month) 
+{
+ var Last_Mon = new Array(31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+ var Mon2;
+
+ if (year % 4 == 0) 
+  Mon2 = true ;
+ else 
+  Mon2 = false ;
+
+ Last_Mon[1] = (Mon2) ? 29 : 28 
+	
+ return Last_Mon[month]
+}
+
+// table태그를 이용하여 달력을 만들어 줍니다.
+function drawCal(firstDay, lastDate, date, year, monthName) 
+{
+ 	var text = ""
+ 	text += "<center><table><th colspan=7 bgcolor=#f0f0f0>";
+ 	text +=
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ var openCol = "<TD BGCOLOR=#FFEFFF WIDTH=45 HEIGHT=40> "
+ openCol += "<FONT COLOR=darkblue> "
+
+ var closeCol = "</FONT></TD>"
+ 
+ text += "<TR ALIGN=center VALIGN=center>"
+
+ var weekDay = new Array("일", "월", "화", "수", "목", "금", "토")
+
+ // 달력의 일, 월, 화, 수, 목, 금, 토, 일을 출력합니다.
+
+
+
+
+
+
+
+
+
+
+
+ 	
+ // 달력 표를 만들어 줍니다.
+ for (var row = 1; row <= Math.ceil((lastDate + firstDay - 1) / 7); ++row) 
+ {
+   text += "<TR ALIGN=right VALIGN=top BGCOLOR=#FFEFEE>"
+
+   for (var col = 1; col <= 7; col++) 
+   {
+
+     if (digit > lastDate) break
+
+     if (curCell < firstDay) 
+     {
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   }
+   text += "</TR>"
+
+ }
+
+ text += "</TABLE>"
+ text += "</CENTER>"
+
+ return text
+}
+}
+</SCRIPT>
+</head>
+<body>
+
+</body>
+</html>

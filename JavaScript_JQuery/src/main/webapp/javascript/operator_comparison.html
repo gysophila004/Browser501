@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+.table1{
+	overflow:hidden;
+	width: auto;
+	border-style:solid;
+	border-color:black;
+	border-width : 3px;
+}
+
+.table1 .dan{
+	margin:5px;
+	padding:30px;
+	width:100px;
+	float:left;
+	border-style:solid;
+	border-color:green;
+	border-width:1px;
+}
+
+</style>
+</head>
+
+<body>
+<h1>1. 구구단 작성하기(2~9)</h1><br>
+<div class="table1">
+  
+<script>
+
+var result;
+for(var a=2;a<=9;a++){
+	document.write("<div class='dan'>");
+	document.write("구구단 "+a+"단"+"<hr>");
+	
+	for(var b=1;b<=9;b++){
+		result = a*b;
+		document.write(a+"x"+b+"="+result+"<br>");
+	}
+	document.write("</div>");
+/* 	if((a-1)%4==0){
+		document.write("<br style='clear:both;'>")
+	} */
+}
+</script>
+</div >
+
+
+<h1>2. 5단만 출력</h1><br>
+
+
+<div class="table1">
+<script>
+
+var result;
+var input = prompt('숫자를 입력하세요','');
+	document.write("<div class='dan'>");
+	document.write("구구단 "+input+"단"+"<hr>");	
+	for(var b=1;b<=9;b++){
+		result = input*b;
+		document.write(input+"x"+b+"="+result+"<br>");
+	}
+	document.write("</div>");
+	
+</script>
+<div style="clear:both;"></div>  
+</div >
+
+</body>
+</html>

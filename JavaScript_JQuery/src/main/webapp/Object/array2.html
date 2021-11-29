@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+자바스크립트의 배열 : 타입이 달라도 저장 가능
+<script>
+var a1 = new Array();
+a1[0]=10;
+a1[1]="10";
+a1[2]=true;
+document.write(a1[0],"<br>");
+
+var num = ["사당","교대","방배","강남"];
+	document.write(num,"<br>");
+	document.write(typeof num,"<br>");
+	document.write("배열을 하나로 결합: "+num.join("-"),"<br>");
+	document.write("배열을 오름차순으로 결합: "+num.sort()+"<br>");
+	document.write("배열을 역으로 결합: "+num.reverse()+"<br>");
+
+	
+	var num2 = ["미금","정자","모란","수서"];
+	num2.splice(2,1,"서초","역삼");
+	document.write("배열을 하나로 결합: "+num2.join("-"),"<br>");
+</script>
+</body>
+</html>

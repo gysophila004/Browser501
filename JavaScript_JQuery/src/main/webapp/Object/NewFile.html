@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/* 시작 시 실행 */
+window.onload = function() {
+var theBtn = document.getElementById("btn");
+var s = document.getElementById("img_src");
+/* 마우스 오버했을 때 실행 */
+theBtn.onmouseover = function() {
+/* id="title" 인 곳에 html 글씨를 mouse over로 변경  */
+document.getElementById("title").innerHTML = "mouse over";
+/* 버튼 경로를 저장 */
+theBtn.firstChild.src = "images/btn_over.gif";
+/* id="img_src인 태그의 html 글씨를 변경" */
+s.innerHTML = theBtn.firstChild.src;
+}
+/* 마우스 아웃했을 때 실행 */
+theBtn.onmouseout = function() {
+/* id="title" 인 곳에 html 글씨를 mouse out로 변경  */
+document.getElementById("title").innerHTML = "mouse out";
+/* 버튼 경로를 저장 */
+theBtn.firstChild.src = "images/btn_out.gif";
+/* id="img_src인 태그의 html 글씨를 변경" */
+s.innerHTML = theBtn.firstChild.src;
+}
+}
+</script>
+</head>
+<body>
+<h1 id="title">mouse out</h1>
+<a href="#" id="btn"><img src="images/btn_out.gif" alt="button" /></a>
+<p id="img_src"></p>
+</body>
+</html>

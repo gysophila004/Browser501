@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+table tr td.n5 {
+	background-color:gray;
+	color:red;
+}
+
+table tr td.n7 {
+background-color:gray;
+	color:green;
+}
+
+
+table tr td.n35 {
+background-color:gray;
+	color:aqua;
+}
+
+</style>
+</head>
+<body>
+1~100까지 5의 배수일 경우에는 빨간색 글자, 7의 배수일 경우는 초록색 글자, <br>
+5, 7의 배수일 경우에는 아쿠아색 글자로 출력하기 
+<script>
+var num=1;
+var t= "<table border='1'>";
+	
+
+	for(var i=1;i<=10;i++){
+	t=t+"<tr>";
+		
+		for (var j=1;j<=10;j++){
+			if(num%5==0 && num%7==0){
+				t=t+"<td style='color:aqua'>"
+				} else if (num%5==0){
+				t=t+"<td style='color:red'>"	
+				} else if (num%7==0){
+				t=t+"<td style='color:green'>"
+				} else {t=t+"<td>"}			
+			t=t+num+"</td>";
+			num++;
+			}
+	
+	t=t+"</tr>";
+	}
+	document.write(t);
+	
+	
+	
+	var no=1;
+	var a= "<table border='1'>";
+		
+
+		for(var i=1;i<=10;i++){
+		a=a+"<tr>";
+	
+	for (var j=1;j<=10;j++){
+		 if(no%5==0 && no%7==0){
+			a=a+"<td class='n35'>"
+			} else if (no%5==0){
+			a=a+"<td class='n5'>"	
+			} else if (no%7==0){
+			a=a+"<td class='n7'>"
+			} else {a=a+"<td>"}	
+		 a=a+no+"</td>";
+		no++;
+		}
+		a=a+"</tr>"
+	}
+		document.write(a);
+</script>
+
+</body>
+</html>

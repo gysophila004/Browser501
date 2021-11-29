@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 가입 페이지</title>
+<style>
+	#wrapper{
+	 width:800px;
+	 margin: 0 auto;
+	}
+	
+	h1{
+	 font-weight:bold;
+	 text-align:center;
+	}
+	
+	h5{
+	 text-align:center;
+	}
+	
+	form{
+	margin:30px;
+	padding:10px;
+	border-style:solid;
+	border-color:gray;
+	border-width : 1px;
+	}
+	
+	label.default{
+	font-weight:bold;
+	width:90px;
+	float:left;
+	}
+	
+	div .button{
+	text-align:center;
+	}
+
+	ul{
+	list-style-type:none;
+	}
+	
+	ul li{
+	margin-bottom:10px;	
+	}
+</style>
+</head>
+<body>
+	<div id="wrapper">
+	<h1>MEMBER INFO</h1>
+	<h5>*표시는 필수 입력 표시입니다</h5><br>
+		<form name="signup" action="#" method="post">
+		 <ul>
+		   <li>
+		    <label for ="memid" class="default">*ID</label>
+		    <input type="text" id="memid" maxlength="14" required="required">
+		    </li>    
+		   <li>
+		    <label for ="memname" class="default">*이름</label>
+		    <input type="text" id="memname" required="required">
+		    </li>
+		   <li>
+		    <label for ="pwd" class="default">*비밀번호</label>
+		    <input type="password" id="pwd" maxlength="15" required="required">
+		    </li>
+		   <li>
+		    <label for ="address" class="default">주소</label>
+		    <input type="text" id="address" size="40">
+		   </li>
+		   <li>
+		    <label for ="id" class="default">전화번호</label>
+		    <input type="tel" id="pnumber">
+		   </li>
+		   <li>
+		    <label for ="id" class="default">메모</label>
+		    <textarea rows="3" cols="40" id=comment></textarea>
+		   </li>
+		 </ul>
+		 
+		 <div class="button">
+	 	 <input type="submit" value="회원가입"> <input type="reset" value="다시 작성">
+	 	 </div>
+	 	 
+		</form>		
+	</div>
+</body>
+</html>

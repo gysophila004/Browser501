@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	fieldset{
+	margin:15px 10px;	
+	}
+	
+	fieldset legend{
+	font-weight:bold;
+	font-size:18px;
+	color:purple;
+	}
+	
+	label.tit{
+	font-weight:bold;
+	width:90px;
+	float:left;
+	}
+	
+	ul{
+	list-style-type:none;
+	}
+	
+	ul li{
+	margin-bottom:10px;	
+	}
+	
+	
+</style>
+</head>
+<body>
+<h1>상품 주문서</h1>
+<form action="#" method="get">
+ <fieldset>
+  <legend>개인 정보</legend>
+	  <ul>
+		  <li>
+			  <label for="name" class="tit">이름</label>
+			  <input type="text" id="name" placeholder="여백없이 입력" required="required" >
+		  </li>
+		  <li>
+			  <label for="call" class="tit">연락처</label>
+			  <input type="tel" id="call" placeholder="연락가능한 번호" >
+		  </li>
+	  </ul>
+ </fieldset>
+ 
+ <fieldset>
+  <legend>배송지 정보</legend>
+  <ul>
+  <li> 
+	  <label for="address" class="tit">주소</label>
+	  <input type="text" id="address" size="40" required="required">
+  </li>
+  <li>
+	  <label for="pnumber" class="tit">전화번호</label>
+	  <input type="tel" id="pnumber" required="required">
+  </li>
+  <li>  
+  <label for="comment" class="tit">메모</label>
+  <textarea rows="3" cols="40" id=comment></textarea>
+  </li>
+  </ul>
+ </fieldset>
+ 
+ <fieldset>
+
+  <legend>주문 정보</legend>
+   <ul> <li>
+  <label>
+  <input type="checkbox" id="product1" name="product1">  
+  <!-- <label for="product1">과테말라 안티구아(100g)</label> -->
+  과테말라 안티구아(100g)
+  </label><label>
+  <input type="number" id="quantity1" name="quantity1" min="0"  max="5" value="0">개<br></label>
+</li><li><label>
+  <input type="checkbox" id="product2" name="product2">
+  <!-- <label for="product2">인도네시아 만델링(100g)</label> -->
+  </label><label>인도네시아 만델링(100g)
+  <input type="number" id="quantity2" name="quantity2" min="0"  max="5" value="0">개<br></label>
+</li><li><label>
+  <input type="checkbox" id="product3" name="product3">
+  <!-- <label for="product3">탐나는도다(블렌딩)(100g)</label> -->
+  </label><label>탐나는도다(블렌딩)(100g)
+  <input type="number" id="quantity3" name="quantity3" min="0" max="5" value="0">개<br></label>
+  </li></ul>
+  
+ </fieldset> 
+ <div style="text-align:center">
+  <input type="submit" value="주문하기"> <input type="reset" value="다시 작성">
+ </div>
+</form>
+
+</body>
+</html>

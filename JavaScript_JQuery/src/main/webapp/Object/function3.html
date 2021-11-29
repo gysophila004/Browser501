@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+id, pw를 입력받아서 비교후(abcd, 1234)<br>
+일치하면 "id님 방문을 환영합니다", 일치하지 않으면 "잘못된 비밀번호 또는 존재하지 않는 id입니다."<br>
+
+
+
+
+<script>
+
+var user_id = prompt("ID를 입력해 주세요.",'');
+var user_pw = prompt("비밀번호를 입력해 주세요.",'');
+
+function login(user_id,user_pw){
+	const id = "abcd";
+	const pw = "1234";
+	
+	if(user_id == id && user_pw == pw){
+		document.write(id +"님 방문을 환영합니다." + "<br>");
+	} else {
+		document.write("잘못된 비밀번호 또는 존재하지 않는 id입니다." + "<br>");
+	}
+}
+
+login(user_id,user_pw);
+
+</script>
+
+</body>
+</html>
