@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>서버의 데이터를 대상 엘리먼트에 삽입하기</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+/* *{
+border: 1px solid black;
+} */
+#left{
+width:45%;
+float:left;
+}
+#right{
+width:45%;
+float:right;
+}
+
+
+</style>
+<script>
+$(function() {	
+	$("#menu1").click(function(){
+		$.ajax({
+				url:"menu.html",
+				datatype:"html",
+				success:function(data){
+// 					$("#left_body").html(data);
+					$("#left_body").append(data);
+				}
+			});
+	});
+	
+ 	$("#menu2").click(function(){
+		$.ajax({
+				url:"menu.html",
+				datatype:"html li",
+				success:function(data){
+// 					$("#right_body").html($(data).find('li'));
+					$("#right_body").html($("menu ui").html());
+				}
+			});
+	});
+
+
+
+
+
+	   
+	
+});
+</script>
+</head>
+<body>
+<div id="left">
+<p id="menu1">메뉴 보기1</p>
+<div id="left_body">
+</div>
+</div>
+
+<div id="right">
+<p id="menu2">메뉴 보기2</p>
+<!-- <a href="menu.html">메뉴 보기2</a> -->
+<div id="right_body">
+</div>
+</div>
+
+
+
+</body>
+</html>

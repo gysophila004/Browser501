@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item id ="1" name="레몬">
+		<price>3000</price>
+		<desc>레몬은 피로회복에 좋다</desc>
+	</item>
+	<item id="2" name="사과">
+		<price>2000</price>
+		<desc>사과는 피부미용에 좋다</desc>
+	</item>
+	<item id="3" name="메론">
+		<price>5000</price>
+		<desc>메론은 소화운동에 좋다</desc>
+	</item>
+	<item id="4" name="수박">
+		<price>6000</price>
+		<desc>수박은 시원하다</desc>
+	</item>
+</items>

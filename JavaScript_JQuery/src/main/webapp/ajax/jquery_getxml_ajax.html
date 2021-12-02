@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+td {
+	border: 1px solid gray;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function() {
+		$.ajax({
+			url:"source/item.xml",
+			type: 'get',
+			dataType: 'xml',
+			success: function(xml){
+			$("#treeData").append("<tr><td>id</td><td>name</td><td>price</td><td>description</td></tr>");
+//	 		jQuery의 반복문 형태
+			$.each(xml, function() {$("#treeData").append("<tr><td>" + this.id + "</td><td>"+ this.name + "</td><td>"+ this.price + "</td><td>"+ this.desc + "</td></tr>");
+			});
+			}
+		});
+	});
+		
+</script>
+</head>
+<body>
+	<table id="treeData">
+
+	</table>
+</body>
+</html>

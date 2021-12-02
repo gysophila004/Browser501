@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	$(function(){
+		$("#btnRead").click(function(){
+			$("#container").load("resource.html");
+		});
+	});
+	$(function(){
+		$("#btnSubject").click(function(){
+			$.ajax({
+				url:"subjextList.jsp",
+				datatype:"html",
+				success:function(data){
+					$("#container").html(data);
+				}
+			});
+			/* $("#container").load("subjextList.jsp"); */
+		});
+		
+	});
+	$(function(){
+		$("#btnLogin").click(function(){
+			$.ajax({
+				url:"checkLogin.jsp?no=3",
+				datatype:"html",
+				success:function(data){
+					$("#container").html(data);				
+				}
+					
+			});
+			
+		});
+	});
+</script>
+<button id="btnRead">서버에서 데이터 가져오기</button>
+<button id="btnSubject">교과목 체크리스트</button>
+<button id="btnLogin">로그인 체크</button><br>
+
+
+
+<br>
+<div id="container">이 곳에 내용 넣기</div>
+</body>
+</html>

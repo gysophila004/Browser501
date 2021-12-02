@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>$.ajax로 jsp 파일 로드하기</title>
+<style>
+td {
+  border: 1px solid gray;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(function(){
+	$("form").submit(function(){
+		let sendData = "userName="+$('input[name=userName]').val();
+			$.ajax({
+				type:'post',
+				url:"welcome.jsp",
+				data:sendData,
+				datatype:"html",
+				success:function(data){
+					$("#message").html(data);}});
+					
+			
+		});
+	});
+	
+
+</script>
+</head>
+<body>
+<form>  
+이름을 입력하세요: 
+<input type="text" id="userName" name="userName">
+<input type="submit" value="전송">
+
+
+
+
+
+
+</form>  
+  <div id="message"></div>
+</body>
+</html>
