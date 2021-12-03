@@ -8,10 +8,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-//1. annotation 방식 : 권장사항
-@WebServlet("/ch02_start/Start")
-//@WebServlet("/Start")
-public class Start extends HttpServlet {
+//Servlet Mapping 방법 : annotiation, web.xml 방식
+//							1. annotation 방식 : 권장사항
+//							2. web.xml 방식 : 
+//@WebServlet("/ch02_start/Start_Xml")
+
+public class Start_Xml extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 

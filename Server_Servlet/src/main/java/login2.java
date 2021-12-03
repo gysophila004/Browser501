@@ -8,10 +8,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-//1. annotation 방식 : 권장사항
-@WebServlet("/ch02_start/Start")
-//@WebServlet("/Start")
-public class Start extends HttpServlet {
+
+@WebServlet("/login/login")
+
+public class login2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 
@@ -19,8 +19,10 @@ public class Start extends HttpServlet {
 		response.setContentType("text/html");
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
-		String name = request.getParameter("name");
-		out.println("<html><body>"+name+"님 환영합니다.</body></html>");		
+		String id = request.getParameter("id");
+		String pwd = request.getParameter("pwd");
+		
+		out.println("<html><body>ID : "+id+"<br>비밀번호 : "+pwd+"<br>완료</body></html>");		
 
 				
 	}
