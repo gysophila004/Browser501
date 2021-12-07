@@ -1,3 +1,4 @@
+// MVC : Controller
 package loginout;
 
 import java.io.IOException;

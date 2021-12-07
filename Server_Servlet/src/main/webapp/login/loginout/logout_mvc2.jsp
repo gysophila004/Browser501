@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>MVC::View</title>
 </head>
 <body>
 로그인 성공 ::<br>
@@ -16,5 +16,11 @@ EL :: ${pws }<br>
 // out.println("<html><body>ID : "+id+"<br>비밀번호 : "+pwd+"<br>완료</body></html>");
 
 %>
+<hr>
+<%
+String id = request.getParameter("id");
+String pwd = request.getParameter("pwd");
+%>
+id: <%=id %> :: pwd: <%=pwd %> <br>
 </body>
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+값1 <input type="text" id="val1"><br>
+값2 <input type="text" id="val2"><br>
+<button id="send">계산</button>
+	<script>
+	$(function(){
+		$("#send").on("click",function(){			
+			$.ajax({
+			url:'calc.jsp',
+			type:'get',
+			data: {val1: $("#val1").val(),
+				val2: $("#val2").val()},
+			success:function(data){ 		
+				$("<p></p>").text(data).appendTo("#result");
+				}
+			})
+			
+		})
+	})
+	</script>
+	
+<div id="result">
+</div>
+</body>
+</html>

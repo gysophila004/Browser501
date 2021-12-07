@@ -5,12 +5,28 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+Get 방식 이용시 파라미터 전송 방법
+<ul>
+<li>a href 태그의 링크 태그에 쿼리 문자열 추가 : 웹 페이지 인코딩 사용</li>
+<li>HTML의 폼(FORM)의 method 속성값을 "GET"으로 지정해서 폼을 전송 : 웹 페이지 인코딩 사용</li>
+<li>웹브라우저의 주소에 직접 쿼리 문자열을 포함하는 URL 입력 : 웹 브라우저마다 다름</li>
+</ul>
+<hr>
+1. 예시
+링크를 Start.jsp?name=hong와 같이 설정<br>
+<a href="Start.jsp?name=hong">링크</a>
+<hr>
+2. 예시
+form action="Start.jsp" method="get"
 <form action="Start.jsp" method="get">
-
-<input type="text" name="name"><br>
+<input type="text" name="name" value="홍길동"><br>
 <input type="submit" value="전송"><br>
-
 </form>
+<hr>
+3. 예시
+주소창에 다음과 같이 입력
+http://localhost:8080/Server_JSP/ch02_start/Start.jsp?name=hong
 
 </body>
 </html>

@@ -9,4 +9,29 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+    
+  <servlet>
+  	<servlet-name>Sport_Servlet_xml</servlet-name>
+  	<servlet-class>study.Sport_Servlet_xml</servlet-class>
+  	
+  	<servlet-name>Exapmle_Servlet</servlet-name>
+  	<servlet-class>example.NowServlet</servlet-class>
+  	  	
+  	<servlet-name>Ch18</servlet-name>
+  	<servlet-class>ch18.mvc.simple.SimpleController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Sport_Servlet_xml</servlet-name>
+  	<url-pattern>/study/02/Sport_Servlet_xml</url-pattern>
+  	
+  	<servlet-name>Exapmle_Servlet</servlet-name>
+  	<url-pattern>/now</url-pattern>
+  	
+  	<servlet-name>Ch18</servlet-name>
+	<!--    	../Simple 식으로 쓰지 않기 
+	jsp에서 	<form action = "../Simple" method="get"> 
+	연결경로 -> 		http://localhost:8080/Server_Servlet/Simple?type=date -->
+  	<url-pattern>/Simple</url-pattern>
+  </servlet-mapping>
 </web-app>
